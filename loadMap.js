@@ -1,18 +1,10 @@
 function addNewTools(clara){
-  ['orbit', 'pan', 'zoom', 'home', 'fullscreen'].forEach(function(tool){
+  ['home', 'fullscreen'].forEach(function(tool){
     clara.player.removeTool(tool);
   });
-  clara.player.addTool({
-    drag: function(){
-      return {
-        momentum:false,
-        handle: function(ev){
-          var nav = clara._store.getNavigator();
-          if(nav) nav.updateSphericalRotation({x:ev.deltaX, y:0});
-        }
-      }
-    }
-  },'azimuthRotate');
+  ['orbit', 'pan', 'zoom'].forEach(function(tool){
+    clara.player.hideTool(tool);
+  });
 }
 
 function loadMap(el, mapId){

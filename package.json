@@ -1,0 +1,7 @@
+{
+  "name": "Tabletop-Game-Mat",
+  "version": 1,
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}

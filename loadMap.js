@@ -36,4 +36,12 @@ function loadMap(el, mapId){
   console.log(clara._store);
 };
 
+var toolbar = document.getElementsByClassName('itemToolBar')[0];
+pieceList.forEach(function(id, index){
+  var imgBlock = document.createElement('img');
+  imgBlock.className = "thumb";
+  imgBlock.src = "https://clara.io/api/scenes/"+id+"/v2thumbnail";
+  toolbar.appendChild(imgBlock);
+});
+
 loadMap('player', '8b99b7f6-8be9-4863-9dcd-4e73fde661ea');
